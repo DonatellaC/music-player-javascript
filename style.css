@@ -1,0 +1,29 @@
+* {
+  transition: all 2s;
+}
+
+body {
+  background-color: #1c1c1c;
+  color: #ffffff;
+  margin: 0;
+  overflow: hidden;
+  font-family: "Jost", sans-serif;
+}
+
+input {
+  display: none;
+}
+
+.file-upload {
+  background-color: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+}
+
+/* Align the button to the center */
+#buttons {
+  text-align: center;
+}
