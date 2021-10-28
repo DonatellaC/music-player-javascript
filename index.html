@@ -10,23 +10,37 @@
       href="https://fonts.googleapis.com/css2?family=Jost&display=swap"
       rel="stylesheet"
     />
+    <!-- Material Icons -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
     <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-    <h1>Select a song!</h1>
-    <label class="file-upload">
-      <input type="file" name="songs" multiple />
-      Click here to upload a song 🎵
-    </label>
-    <audio src=""></audio>
-    <div id="buttons">
-      <button id="previous">Previous</button>
-      <button id="play">Play</button>
-      <button id="next">Next</button>
+    <div class="container">
+      <div class="top-section">
+        <h1>Select a song!</h1>
+      </div>
+      <div class="middle-section">
+        <label class="file-upload">
+          <input type="file" name="songs" multiple />
+          Click here to upload a song
+          <span class="material-icons"> music_note </span>
+        </label>
+        <audio src=""></audio>
+      </div>
+      <div id="buttons">
+        <button id="previous">
+          <i class="material-icons">skip_previous</i>
+        </button>
+        <button id="play"><i class="material-icons">play_arrow</i></button>
+        <button id="next"><i class="material-icons">skip_next</i></button>
+      </div>
     </div>
-
+    <!-- JS -->
     <script src="index.js"></script>
   </body>
 </html>
