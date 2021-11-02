@@ -45,7 +45,7 @@ function getSongs(event) {
   // Change label to the name of the song
   label.innerText = songs[currentSong].name.slice(0, -4);
   // Change title
-  title.innerText = "Music Player 🤘";
+  title.innerText = "Music Player";
 }
 
 function playSong() {
@@ -54,25 +54,28 @@ function playSong() {
   // Change label to the name of the song
   label.innerText = songs[currentSong].name.slice(0, -4);
 
-  //Change the backgorund when the song plays
+  //Change the background when the song plays
   label.style.color = colors[Math.floor(Math.random() * songs.length)];
   label.style.backgroundColor =
     colors[Math.floor(Math.random() * songs.length)];
 
   player.setAttribute("src", song);
   player.play();
-  play.innerText = "⏸";
+  play.querySelector("i.fas").classList.remove("fa-play");
+  play.querySelector("i.fas").classList.add("fa-pause");
   play.onclick = pause;
 }
 
 function pause() {
-  play.innerText = "▶️";
+  play.querySelector("i.fas").classList.add("fa-play");
+  play.querySelector("i.fas").classList.remove("fa-pause");
   player.pause();
   play.onclick = playCurrent;
 }
 
 function playCurrent() {
-  play.innerText = "⏸";
+  play.querySelector("i.fas").classList.remove("fa-play");
+  play.querySelector("i.fas").classList.add("fa-pause");
   player.play();
   play.onclick = pause;
 }

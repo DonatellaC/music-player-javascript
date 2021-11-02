@@ -5,8 +5,7 @@
 }
 
 body {
-  background-color: #b1aff0;
-  color: #ffffff;
+  background: linear-gradient(#87d9fa 0%, #fd8c92 90%);
   margin: 0;
   overflow: hidden;
   font-family: "Jost", sans-serif;
@@ -14,6 +13,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  color: #444444;
 }
 
 .container {
@@ -23,8 +23,8 @@ body {
   overflow: hidden;
   position: relative;
   border-radius: 15px;
-  background: linear-gradient(#87d9fa 0%, #fd8c92 90%);
   box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.342);
+  background: #ffffff;
 }
 
 /* Top-section */
@@ -46,29 +46,34 @@ input {
 }
 
 .file-upload {
-  background-color: rgba(39, 68, 75, 0.4);
+  background-color: rgba(155, 240, 214, 0.4);
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 200px;
+  text-align: center;
   padding: 10px;
-  border-radius: 15px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
 }
 
 /* Buttons */
 #buttons {
+  margin-top: 30px;
   text-align: center;
 }
 
 i {
   cursor: pointer;
-  font-size: 35px;
+  font-size: 20px;
   color: #72646f;
+  padding: 5px;
 }
 
 #previous,
 #play,
 #next {
   border: none;
+  border-radius: 5px;
 }

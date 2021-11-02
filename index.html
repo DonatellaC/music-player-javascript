@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Spotify</title>
+    <title>Music Player</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <!-- Google font -->
     <link
@@ -14,6 +14,10 @@
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
     />
     <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
@@ -32,12 +36,17 @@
         </label>
         <audio src=""></audio>
       </div>
+      <div class="title-song">Song title</div>
       <div id="buttons">
-        <button id="previous">
-          <i class="material-icons">skip_previous</i>
+        <button id="previous" class="action-btn">
+          <i class="fas fa-backward"></i>
         </button>
-        <button id="play"><i class="material-icons">play_arrow</i></button>
-        <button id="next"><i class="material-icons">skip_next</i></button>
+        <button id="play" class="action-btn action-btn-big">
+          <i class="fas fa-play"></i>
+        </button>
+        <button id="next" class="action-btn">
+          <i class="fas fa-forward"></i>
+        </button>
       </div>
     </div>
     <!-- JS -->
