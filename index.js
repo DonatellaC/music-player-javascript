@@ -9,12 +9,7 @@ const colors = [
   "BlueViolet",
   "Chartreuse",
   "Coral",
-  "Crimson",
   "Cyan",
-  "DarkBlue",
-  "DarkMagenta",
-  "DarkOrange",
-  "DarkOrchid",
   "DarkRed",
   "DeepPink",
   "FireBrick",
@@ -30,6 +25,7 @@ const previous = document.querySelector("#previous");
 const play = document.querySelector("#play");
 const next = document.querySelector("#next");
 const player = document.querySelector("audio");
+const titleSong = document.querySelector("#title-song");
 player.volume = 0.3;
 
 // Event listeners when the user upload something
@@ -42,8 +38,8 @@ function getSongs(event) {
   songs = event.target.files;
   // Play the first song
   playSong();
-  // Change label to the name of the song
-  label.innerText = songs[currentSong].name.slice(0, -4);
+  // Change title-song to the name of the song
+  titleSong.innerText = songs[currentSong].name.slice(0, -4);
   // Change title
   title.innerText = "Music Player";
 }
@@ -51,13 +47,8 @@ function getSongs(event) {
 function playSong() {
   // Get temporary URL for mp3 file
   let song = URL.createObjectURL(songs[currentSong]);
-  // Change label to the name of the song
-  label.innerText = songs[currentSong].name.slice(0, -4);
-
-  //Change the background when the song plays
-  label.style.color = colors[Math.floor(Math.random() * songs.length)];
-  label.style.backgroundColor =
-    colors[Math.floor(Math.random() * songs.length)];
+  // Change title-song to the name of the song
+  titleSong.innerText = songs[currentSong].name.slice(0, -4);
 
   player.setAttribute("src", song);
   player.play();

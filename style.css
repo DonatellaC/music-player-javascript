@@ -58,6 +58,11 @@ input {
   border-radius: 50%;
 }
 
+.title-song {
+  display: flex;
+  justify-content: center;
+}
+
 /* Buttons */
 #buttons {
   margin-top: 30px;
