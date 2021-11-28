@@ -3,19 +3,16 @@ let songs = [];
 let currentSong = 0;
 
 const colors = [
-  "Aqua",
-  "Aquamarine",
-  "Blue",
-  "BlueViolet",
-  "Chartreuse",
-  "Coral",
-  "Cyan",
-  "DarkRed",
-  "DeepPink",
-  "FireBrick",
-  "Fuchsia",
-  "GreenYellow",
-  "Lime",
+  "#E3BAB3",
+  "#FEB47B",
+  "#AED9DA",
+  "#F7DFD4",
+  "#A0C1B8",
+  "#E9DCCD",
+  "#E7CC8F",
+  "#CBC5C1",
+  "#DFE2D2",
+  "#E2B091",
 ];
 
 const title = document.querySelector("h1");
