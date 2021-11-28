@@ -49,6 +49,11 @@ function playSong() {
   let song = URL.createObjectURL(songs[currentSong]);
   // Change title-song to the name of the song
   titleSong.innerText = songs[currentSong].name.slice(0, -4);
+  //Change the background when the song plays
+  label.style.backgroundColor =
+    colors[Math.floor(Math.random() * songs.length)];
+  //Change the label when the song plays
+  label.style.color = "transparent";
 
   player.setAttribute("src", song);
   player.play();
@@ -62,6 +67,8 @@ function pause() {
   play.querySelector("i.fas").classList.remove("fa-pause");
   player.pause();
   play.onclick = playCurrent;
+  //Change the label when the song is paused
+  label.style.color = "#444444";
 }
 
 function playCurrent() {
@@ -72,15 +79,21 @@ function playCurrent() {
 }
 
 function nextSong() {
-  if (currentSong + 1 < songs.length) {
-    currentSong++;
-    playSong();
+  // Go back to the first song if the current one is the last in the list
+  if (currentSong < songs.length - 1) {
+    currentSong += 1;
+  } else {
+    currentSong = 0;
   }
+  playSong();
 }
 
 function previousSong() {
-  if (currentSong - 1 >= 0) {
-    currentSong--;
-    playSong();
+  // Go back to the last song if the current one is the first in the list
+  if (currentSong > 0) {
+    currentSong -= 1;
+  } else {
+    currentSong = songs.length - 1;
   }
+  playSong();
 }
