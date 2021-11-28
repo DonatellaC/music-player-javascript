@@ -73,6 +73,8 @@ function playCurrent() {
   play.querySelector("i.fas").classList.add("fa-pause");
   player.play();
   play.onclick = pause;
+  //Change the label when the song is paused
+  label.style.color = "transparent";
 }
 
 function nextSong() {
